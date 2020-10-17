@@ -38,7 +38,7 @@ tbody {
 }
 .container {
   max-width: 800px;
-  padding: 0 30px;
+  padding: 60px 30px;
   margin: 0 auto;
 }
 .item-container {
@@ -57,4 +57,28 @@ tbody {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card-container {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  margin: 20px;
+  min-height: 100px;
+  width: 300px;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-container h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.no-data {
+  padding-top: 80px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
 }

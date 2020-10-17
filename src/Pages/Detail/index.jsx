@@ -30,13 +30,17 @@ const Detail = () => {
   ) : (
     <>
       <Link to='/'>Go Back</Link>
-      <div>
-        {reviewData?.data.map((data, index) => (
-          <div key={index}>
-            <Card cardData={data} />
-          </div>
-        ))}
-      </div>
+      {reviewData?.data.length === 0 ? (
+        <h4 className='no-data'>No data available</h4>
+      ) : (
+        <div className='card-list'>
+          {reviewData?.data.map((data, index) => (
+            <div key={index}>
+              <Card cardData={data} />
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
