@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { sendRequest } from '../../apiConfig';
 import { SyncLoader } from 'react-spinners';
 import { useParams, Link } from 'react-router-dom';
+import Card from '../../components/Card';
 
 const Detail = () => {
   const [reviewData, setReviewData] = useState([]);
@@ -20,16 +21,20 @@ const Detail = () => {
       // ...
     }
     fetchReviews();
-  }, []);
-  console.log(reviewData, '########');
+  }, [params.answer, params.question]);
+
   return loading ? (
-    <SyncLoader />
+    <div className='spinner'>
+      <SyncLoader />
+    </div>
   ) : (
     <>
       <Link to='/'>Go Back</Link>
       <div>
-        {reviewData.data.map((data) => (
-          <div>data</div>
+        {reviewData?.data.map((data, index) => (
+          <div key={index}>
+            <Card cardData={data} />
+          </div>
         ))}
       </div>
     </>
