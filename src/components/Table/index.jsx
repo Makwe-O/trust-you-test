@@ -15,12 +15,10 @@ const Table = ({ title, data, question }) => {
           Object.keys(data)?.map((item, index) => (
             <tr key={item}>
               <td>
-                <Link to={`reviews/${question}/${Object.values(data)[index]}`}>
-                  {item}
-                </Link>
+                <Link to={`reviews/${question}/${item}`}>{item}</Link>
               </td>
               <td>
-                <Link to={`reviews/${question}/${Object.values(data)[index]}`}>
+                <Link to={`reviews/${question}/${item}`}>
                   {Object.values(data)[index]}
                 </Link>
               </td>

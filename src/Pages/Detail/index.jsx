@@ -29,7 +29,9 @@ const Detail = () => {
     </div>
   ) : (
     <>
-      <Link to='/'>Go Back</Link>
+      <Link to='/' className='back'>
+        Go Back
+      </Link>
       {reviewData?.data.length === 0 ? (
         <h4 className='no-data'>No data available</h4>
       ) : (

@@ -65,6 +65,10 @@ tbody {
   margin: 20px;
   min-height: 100px;
   width: 300px;
+  transition: all 0.5s ease;
+}
+.card-container:hover {
+  box-shadow: 2px 5px 10px #e3e3e3;
 }
 .card-list {
   display: flex;
@@ -74,6 +78,7 @@ tbody {
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: capitalize;
+  word-break: break-all;
 }
 .no-data {
   padding-top: 80px;
@@ -81,4 +86,11 @@ tbody {
 }
 a {
   text-decoration: none;
+}
+.back {
+  padding: 10px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 20px;
 }
