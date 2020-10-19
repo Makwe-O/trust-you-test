@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Doughnut } from 'react-chartjs-2';
+import React from "react";
+import { Doughnut } from "react-chartjs-2";
 
 const Pie = ({ data }) => {
   console.log(data);
@@ -10,7 +10,7 @@ const Pie = ({ data }) => {
         datasets: [
           {
             barPercentage: 1,
-            hoverBackgroundColor: '#e3e3ef',
+            hoverBackgroundColor: "#e3e3ef",
             data: [...Object.values(data)],
           },
         ],
@@ -26,7 +26,7 @@ const Pie = ({ data }) => {
       }}
     />
   ) : (
-    ''
+    ""
   );
 };
 
