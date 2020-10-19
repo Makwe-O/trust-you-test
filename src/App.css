@@ -47,6 +47,7 @@ tbody {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -64,8 +65,9 @@ tbody {
   border-radius: 4px;
   margin: 20px;
   min-height: 100px;
-  width: 300px;
+  max-width: 300px;
   transition: all 0.5s ease;
+  box-shadow: 1px 1px 3px #e3e3e3;
 }
 .card-container:hover {
   box-shadow: 2px 5px 10px #e3e3e3;
@@ -93,4 +95,10 @@ a {
   border-radius: 4px;
   cursor: pointer;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 540px) {
+  .item-container {
+    flex-direction: column;
+  }
 }
